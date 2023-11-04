@@ -1,0 +1,71 @@
+/* styles.css */
+
+:root {
+    --background-color: #4287f5;
+    /* Custom background color */
+    --text-color: white;
+    /* Adaptive text color */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: var(--background-color);
+    /* Use the custom background color */
+}
+
+h1 {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h2 {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+p {
+    font-weight: bold;
+    color: var(--text-color);
+    /* Use adaptive text color */
+}
+
+p span {
+    font-weight: normal;
+}

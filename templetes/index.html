@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Tracker</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="images/mail.jpeg" type="image/jpeg">
+</head>
+<body>
+    <h1>Email Tracker</h1>
+    <form method="post">
+        <label for="email_address">Enter the email address you want to track:</label>
+        <input type="email" name="email_address" required>
+        <input type="submit" value="Track">
+    </form>
+    
+    <!-- Display tracking information if available -->
+    {% if tracking_info %}
+    <h2>Tracking Information:</h2>
+    <p>Mail server IP address: {{ tracking_info['mail_server_ip'] }}</p>
+    <p>Host Name: {{ tracking_info['mail_server_host'] }}</p>
+    <p>City: {{ tracking_info['city'] }}</p>
+    <p>Region: {{ tracking_info['region'] }}</p>
+    <p>Country: {{ tracking_info['country'] }}</p>
+
+    <!-- Display Location if available -->
+    {% if tracking_info['location'] %}
+        <p>Location: {{ tracking_info['location'] }}</p>
+    {% endif %}
+
+    <!-- Display Time Zone if available -->
+    {% if tracking_info['time_zone'] %}
+        <p>Time Zone: {{ tracking_info['time_zone'] }}</p>
+    {% endif %}
+    {% endif %}
+
+</body>
+</html>
